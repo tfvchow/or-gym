@@ -48,7 +48,9 @@ def create_env(config, *args, **kwargs):
 	elif env_name == 'PortfolioOpt-v0':
 		from or_gym.envs.finance.portfolio_opt import PortfolioOptEnv as env
 	elif env_name == 'TSP-v0':
-		raise NotImplementedError('{} not yet implemented.'.format(env_name))
+		from or_gym.envs.classic_or.tsp import TSPEnv as env
+	elif env_name == 'TSP-v1':
+		from or_gym.envs.classic_or.tsp import TSPDistCost as env
 	elif env_name == 'VehicleRouting-v0':
 		from or_gym.envs.classic_or.vehicle_routing import VehicleRoutingEnv as env
 	elif env_name == 'VehicleRouting-v1':
